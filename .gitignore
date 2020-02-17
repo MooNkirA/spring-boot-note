@@ -62,3 +62,15 @@ Bin
 .DS_Store
 Thumbs.db
 *.orig
+
+# this project ignore
+spring-boot-2.2.2.RELEASE/spring-boot-project/spring-boot-tools/spring-boot-gradle-plugin/src/test/resources/org/springframework/boot/gradle/plugin/ApplicationPluginActionIntegrationTests-applicationNameCanBeUsedToCustomizeDistributionName.gradle
+spring-boot-2.2.2.RELEASE/spring-boot-project/spring-boot-tools/spring-boot-gradle-plugin/src/test/resources/org/springframework/boot/gradle/plugin/DependencyManagementPluginActionIntegrationTests-helpfulErrorWhenVersionlessDependencyFailsToResolve.gradle
+spring-boot-2.2.2.RELEASE/spring-boot-project/spring-boot-tools/spring-boot-gradle-plugin/src/test/resources/org/springframework/boot/gradle/plugin/JavaPluginActionIntegrationTests-additionalMetadataLocationsConfiguredWhenProcessorIsPresent.gradle
+spring-boot-2.2.2.RELEASE/spring-boot-project/spring-boot-tools/spring-boot-gradle-plugin/src/test/resources/org/springframework/boot/gradle/plugin/JavaPluginActionIntegrationTests-additionalMetadataLocationsNotConfiguredWhenProcessorIsAbsent.gradle
+spring-boot-2.2.2.RELEASE/spring-boot-project/spring-boot-tools/spring-boot-gradle-plugin/src/test/resources/org/springframework/boot/gradle/plugin/JavaPluginActionIntegrationTests-javaCompileTasksCanOverrideDefaultParametersCompilerFlag.gradle
+spring-boot-2.2.2.RELEASE/spring-boot-project/spring-boot-tools/spring-boot-gradle-plugin/src/test/resources/org/springframework/boot/gradle/plugin/JavaPluginActionIntegrationTests-javaCompileTasksUseParametersAndAdditionalCompilerFlags.gradle
+spring-boot-2.2.2.RELEASE/spring-boot-project/spring-boot-tools/spring-boot-gradle-plugin/src/test/resources/org/springframework/boot/gradle/plugin/JavaPluginActionIntegrationTests-javaCompileTasksUseParametersCompilerFlagByDefault.gradle
+spring-boot-2.2.2.RELEASE/spring-boot-project/spring-boot-tools/spring-boot-gradle-plugin/src/test/resources/org/springframework/boot/gradle/plugin/KotlinPluginActionIntegrationTests-kotlinCompileTasksCanOverrideDefaultJavaParametersFlag.gradle
+spring-boot-2.2.2.RELEASE/spring-boot-project/spring-boot-tools/spring-boot-gradle-plugin/src/test/resources/org/springframework/boot/gradle/plugin/KotlinPluginActionIntegrationTests-kotlinCompileTasksUseJavaParametersFlagByDefault.gradle
+spring-boot-2.2.2.RELEASE/spring-boot-project/spring-boot-tools/spring-boot-gradle-plugin/src/test/resources/org/springframework/boot/gradle/plugin/SpringBootPluginIntegrationTests-unresolvedDependenciesAreAnalyzedWhenDependencyResolutionFails.gradle
