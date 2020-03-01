@@ -12,6 +12,8 @@
 	<properties>
 		<revision>2.2.2.RELEASE</revision>
 		<main.basedir>${basedir}</main.basedir>
+		<!-- 下载后增加此属性配置 -->
+		<disable.checks>true</disable.checks>
 	</properties>
 	<!-- Most elements are in profiles so they are stripped out during maven-flatten -->
 	<profiles>
