@@ -21,6 +21,7 @@
     <!-- 子项目 -->
     <modules>
         <module>00.Spring-Boot-Start</module>
+        <module>01.Spring-Boot-Servlet-Component</module>
     </modules>
 
     <!-- 版本号管理 -->
@@ -58,6 +59,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
             </plugin>
         </plugins>
     </build>
