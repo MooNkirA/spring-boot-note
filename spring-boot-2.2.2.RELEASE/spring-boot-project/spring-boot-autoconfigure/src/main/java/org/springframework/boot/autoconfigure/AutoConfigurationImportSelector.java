@@ -95,6 +95,7 @@ public class AutoConfigurationImportSelector implements DeferredImportSelector, 
 		}
 		AutoConfigurationMetadata autoConfigurationMetadata = AutoConfigurationMetadataLoader
 				.loadMetadata(this.beanClassLoader);
+		// 此方法是主要处理逻辑，获取需要加载的bean全限定名集合
 		AutoConfigurationEntry autoConfigurationEntry = getAutoConfigurationEntry(autoConfigurationMetadata,
 				annotationMetadata);
 		return StringUtils.toStringArray(autoConfigurationEntry.getConfigurations());
@@ -113,12 +114,16 @@ public class AutoConfigurationImportSelector implements DeferredImportSelector, 
 			return EMPTY_ENTRY;
 		}
 		AnnotationAttributes attributes = getAttributes(annotationMetadata);
+		// 通过getCandidateConfigurations方法获取所有需要加载的bean全限定名集合
 		List<String> configurations = getCandidateConfigurations(annotationMetadata, attributes);
+		// 去重处理
 		configurations = removeDuplicates(configurations);
+		// 获取不需要加载的bean,这里我们可以通过spring.autoconfigure.exclude人为配置
 		Set<String> exclusions = getExclusions(annotationMetadata, attributes);
 		checkExcludedClasses(configurations, exclusions);
 		configurations.removeAll(exclusions);
 		configurations = filter(configurations, autoConfigurationMetadata);
+		// 发送事件，通知所有的AutoConfigurationImportListener进行监听
 		fireAutoConfigurationImportEvents(configurations, exclusions);
 		return new AutoConfigurationEntry(configurations, exclusions);
 	}
@@ -167,7 +172,9 @@ public class AutoConfigurationImportSelector implements DeferredImportSelector, 
 	 * attributes}
 	 * @return a list of candidate configurations
 	 */
+	// 这里是获取bean渠道的地方，重点是SpringFactoriesLoader#loadFactoryNames方法
 	protected List<String> getCandidateConfigurations(AnnotationMetadata metadata, AnnotationAttributes attributes) {
+		// 此处的getSpringFactoriesLoaderFactoryClass()最终返回EnableAutoConfiguration.class
 		List<String> configurations = SpringFactoriesLoader.loadFactoryNames(getSpringFactoriesLoaderFactoryClass(),
 				getBeanClassLoader());
 		Assert.notEmpty(configurations, "No auto configuration classes found in META-INF/spring.factories. If you "
