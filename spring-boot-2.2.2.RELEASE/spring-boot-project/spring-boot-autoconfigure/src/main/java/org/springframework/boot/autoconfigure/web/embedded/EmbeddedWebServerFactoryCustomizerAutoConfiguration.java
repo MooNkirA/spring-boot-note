@@ -42,7 +42,7 @@ import org.springframework.core.env.Environment;
  * @since 2.0.0
  */
 @Configuration(proxyBeanMethods = false)
-@ConditionalOnWebApplication
+@ConditionalOnWebApplication // 当web环境才加载
 @EnableConfigurationProperties(ServerProperties.class)
 public class EmbeddedWebServerFactoryCustomizerAutoConfiguration {
 

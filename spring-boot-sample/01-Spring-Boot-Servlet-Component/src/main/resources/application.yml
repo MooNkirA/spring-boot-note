@@ -1,7 +1,7 @@
 # spring boot 项目的基础配置
 spring:
   application:
-    name: 01.Spring-Boot-Servlet-Component
+    name: 01-Spring-Boot-Servlet-Component
 # 应用的端口相关设置（如果是部署到tomcat中，此处端口不需要配置开发与生产）
 server:
   port: 8080  # 默认也是8080
