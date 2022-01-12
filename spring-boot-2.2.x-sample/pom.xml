@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.moon</groupId>
+    <artifactId>spring-boot-sample</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+    <description>spring boot 使用示例项目</description>
+
+    <!-- 引入spring boot方式1：通过继承父工程的方式 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.2.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <!-- 子项目 -->
+    <modules>
+        <module>00-Spring-Boot-Start</module>
+        <module>01-Spring-Boot-Servlet-Component</module>
+        <module>03-Spring-Boot-Druid</module>
+    </modules>
+
+    <!-- 版本号管理 -->
+    <properties>
+        <!-- 当前项目版本号 -->
+        <spring-boot-sample.version>1.0.0</spring-boot-sample.version>
+
+        <!-- maven插件版本 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <!-- spring boot 版本 -->
+        <spring-boot.version>2.2.2.RELEASE</spring-boot.version>
+
+        <!-- Druid数据库连接池版本 -->
+        <druid.version>1.1.21</druid.version>
+        <!-- mybatis启动器版本(RELEASE会依赖目前最新的版本) -->
+        <mybatis-starter.vertion>RELEASE</mybatis-starter.vertion>
+        <!-- mysql数据库驱动版本 -->
+        <mysql-connector-java.version>5.1.45</mysql-connector-java.version>
+    </properties>
+
+    <!-- 锁定依赖版本 -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- 引入spring boot方式2：使用import依赖方式 -->
+            <!-- SpringBoot的依赖配置 -->
+            <!--<dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>-->
+
+            <!-- mysql驱动 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
+            </dependency>
+            <!-- MyBatis启动器 -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-starter.vertion}</version>
+            </dependency>
+            <!-- Druid数据库连接池 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- Package as an executable jar -->
+    <build>
+        <plugins>
+            <!-- 插件作用：将一个SpringBoot的工程打包成为可执行的jar包 -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
