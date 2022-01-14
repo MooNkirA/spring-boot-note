@@ -1,0 +1,5 @@
+spring:
+  devtools:
+    restart:
+      # 配置排除触发热部署的资源（文件或者文件夹）
+      exclude: static/**,public/**

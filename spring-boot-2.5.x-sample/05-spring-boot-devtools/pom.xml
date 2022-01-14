@@ -9,28 +9,16 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>00-spring-boot-quickstart</artifactId>
+    <artifactId>05-spring-boot-devtools</artifactId>
     <name>${project.artifactId}</name>
     <packaging>jar</packaging>
-    <description>Spring Boot 基础快速开始示例</description>
+    <description>Spring Boot devtools 热部署使用示例</description>
 
     <dependencies>
         <!-- 引入web项目启动器 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <!-- 排除Tomcat启动器，如果要用jetty容器或者要打包(war)部署到服务器，都需要排除内置Tomcat-->
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <!-- 更换内嵌 web 服务 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jetty</artifactId>
         </dependency>
 
         <!-- 引入spring boot的测试类 -->
@@ -39,6 +27,15 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- 使用spring-boot-devtools提供的开发者工具，配置devtools开启热部署 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <!-- 表示依赖不会向下传递 -->
+            <optional>true</optional>
+        </dependency>
+        <!-- 热部署 -->
     </dependencies>
 
     <build>
@@ -46,6 +43,18 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.moon.springboot.devtools.DevtoolsApplication</mainClass>
+                    <!-- fork: 如果没有该项配置，这个devtools不会起作用，即应用不会restart -->
+                    <fork>true</fork>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

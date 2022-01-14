@@ -14,7 +14,8 @@ import org.springframework.core.env.Environment;
  * @description
  */
 // properties 属性用于在测试时指定一些配置参数值，下例就是指定配置文件中 ACTIVE_NAME 变量的值为 dev
-@SpringBootTest(properties = {"ACTIVE_NAME=dev"})
+// @SpringBootTest(properties = {"ACTIVE_NAME=dev"})
+@SpringBootTest
 public class MultiConfigTest {
 
     @Autowired

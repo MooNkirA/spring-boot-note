@@ -33,6 +33,33 @@
         </dependency>
     </dependencies>
 
+    <!-- 配置多环境 -->
+    <profiles>
+        <profile>
+            <!-- profile的唯一标识 -->
+            <id>dev_env</id>
+            <!-- 扩展属性列表 -->
+            <properties>
+                <!-- 设置激活时的变量值 -->
+                <profile.active>dev</profile.active>
+            </properties>
+            <!-- 触发profile的条件逻辑 -->
+            <activation>
+                <!-- 当前的profile默认激活 -->
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <!-- profile的唯一标识 -->
+            <id>prod_env</id>
+            <!-- 扩展属性列表 -->
+            <properties>
+                <!-- 设置激活时的变量值 -->
+                <profile.active>prod</profile.active>
+            </properties>
+        </profile>
+    </profiles>
+
     <build>
         <plugins>
             <plugin>

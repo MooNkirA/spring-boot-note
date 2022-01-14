@@ -1,7 +1,7 @@
 spring:
   profiles:
     # 指定当前激活环境的配置文件
-    active: @profile.active@ # 通过 @@ 占位符，指定读取 Maven 对应的配置指定的profile的值
+    active: dev
     # 使用include引入不同环境中按功能拆分的配置。但有缺点就是每次环境修改都要同时修改include的值
     # include: devDatabase,devFreemarker,devJpa
     # spring boot 2.4 版本后新增一个 group 属性，可以将配置文件分组
