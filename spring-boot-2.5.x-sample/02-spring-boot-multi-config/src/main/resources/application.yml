@@ -1,3 +1,3 @@
 spring:
   profiles:
-    active: @active@, other # 指定当前激活的配置文件
+    active: ${ACTIVE_NAME}, other # 指定当前激活的配置文件，可指定多个
