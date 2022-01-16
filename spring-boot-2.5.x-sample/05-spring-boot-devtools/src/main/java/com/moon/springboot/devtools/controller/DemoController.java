@@ -18,7 +18,7 @@ public class DemoController {
 
     @GetMapping("test")
     public String basicTest() {
-        return "devtools 热部署测试~~";
+        return "devtools 热部署测试!!!!!";
     }
 
 }
