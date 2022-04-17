@@ -59,3 +59,21 @@ company:
     - Java
     - python
     - Big data
+
+# ********** 测试 @ConfigurationProperties 给第三方 jar 包 druid 对象属性绑定值 **********
+dataSource:
+  driverClassName: com.mysql.jdbc.Driver123 # 故意随意写
+  password: 1234567890
+
+# ********** 测试 Spring Boot 宽松绑定规则 **********
+servers:
+  # 以下配置均可配置到实体类 ipAddress 属性
+  ip-address: 192.168.0.2       # 官方推荐配置名称使用烤肉串模式，也就是中划线模式
+  # ipAddress: 192.168.0.2      # 驼峰模式
+  # ip_address: 192.168.0.2     # 下划线模式
+  # IP_ADDRESS: 192.168.0.2     # 常量模式
+  # IPADDRESS: 192.168.0.2
+  # IP_ADD_R-E_SS: 192.168.0.2  # 任何写法（实际开发不推荐这么乱搞 ^_^）
+  serverTimeOut: 3    # 使用常用计量单位绑定
+  dataSize: 10        # 使用常用计量单位绑定
+

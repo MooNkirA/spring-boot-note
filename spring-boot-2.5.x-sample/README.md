@@ -28,6 +28,8 @@
 
 ## 项目模块介绍
 
+### 已实现
+
 | 完成度 | Module 名称                 | Module 介绍                     |
 | :----: | --------------------------- | ------------------------------- |
 |   √    | 00-spring-boot-quickstart   | Spring Boot 基础快速开始示例    |
@@ -35,6 +37,8 @@
 |   √    | 02-spring-boot-multi-config | Spring Boot 项目多配置示例      |
 |   √    | 03-spring-boot-war          | Spring Boot 项目打成 war 包示例 |
 |   √    | 04-spring-boot-junit        | Spring Boot 整合 Junit          |
-|        | 05-spring-boot-devtools     | Spring Boot 热部署插件          |
+|   √    | 05-spring-boot-devtools     | Spring Boot 热部署插件          |
 |        |                             |                                 |
 |        |                             |                                 |
+
+### 计划实现
