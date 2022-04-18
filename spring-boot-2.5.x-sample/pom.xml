@@ -27,6 +27,7 @@
         <module>03-spring-boot-war</module>
         <module>04-spring-boot-junit</module>
         <module>05-spring-boot-devtools</module>
+        <module>06-spring-boot-hibernate-validator</module>
     </modules>
 
     <properties>

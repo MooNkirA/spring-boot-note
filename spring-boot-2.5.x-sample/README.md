@@ -19,7 +19,7 @@
 
 ## 项目运行方式
 
-1. `git clone https://github.com/xkcoding/spring-boot-demo.git`
+1. `git clone https://github.com/MooNkirA/spring-boot-note.git`
 2. 使用 IDEA 打开 clone 下来的项目
 3. 在 IDEA 中 Maven Projects 的面板导入项目根目录下 的 `pom.xml` 文件（勾上 IDEA 顶部工具栏的 View -> Tool Buttons ，然后 Maven Projects 的面板就会出现在 IDEA 的右侧）
 4. 找到各个 Module 的 Application 类就可以运行各个 demo 了
@@ -30,15 +30,16 @@
 
 ### 已实现
 
-| 完成度 | Module 名称                 | Module 介绍                     |
-| :----: | --------------------------- | ------------------------------- |
-|   √    | 00-spring-boot-quickstart   | Spring Boot 基础快速开始示例    |
-|   √    | 01-spring-boot-config       | Spring Boot 项目配置示例        |
-|   √    | 02-spring-boot-multi-config | Spring Boot 项目多配置示例      |
-|   √    | 03-spring-boot-war          | Spring Boot 项目打成 war 包示例 |
-|   √    | 04-spring-boot-junit        | Spring Boot 整合 Junit          |
-|   √    | 05-spring-boot-devtools     | Spring Boot 热部署插件          |
-|        |                             |                                 |
-|        |                             |                                 |
+| 完成度 | Module 名称                        | Module 介绍                            |
+| :----: | ---------------------------------- | -------------------------------------- |
+|   √    | 00-spring-boot-quickstart          | Spring Boot 基础快速开始示例           |
+|   √    | 01-spring-boot-config              | Spring Boot 项目配置示例               |
+|   √    | 02-spring-boot-multi-config        | Spring Boot 项目多配置示例             |
+|   √    | 03-spring-boot-war                 | Spring Boot 项目打成 war 包示例        |
+|   √    | 04-spring-boot-junit               | Spring Boot 整合 Junit                 |
+|   √    | 05-spring-boot-devtools            | Spring Boot 热部署插件                 |
+| 整理中 | 06-spring-boot-hibernate-validator | Spring Boot 整合 javax.validation 校验 |
+|        |                                    |                                        |
+|        |                                    |                                        |
 
 ### 计划实现
