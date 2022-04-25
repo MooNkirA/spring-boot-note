@@ -9,18 +9,16 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>04-spring-boot-junit</artifactId>
+    <artifactId>07-spring-boot-embedded-hikariCP</artifactId>
     <name>${project.artifactId}</name>
-    <packaging>jar</packaging>
-    <description>Spring Boot 整合 Junit</description>
+    <description>Spring Boot 内置数据源 HikariCP 基础使用示例</description>
 
     <dependencies>
-        <!-- spring boot 依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
-        <!-- spring boot 测试启动依赖 -->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -33,13 +31,14 @@
         </dependency>
 
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-        <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.4.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
     </dependencies>
 

@@ -28,6 +28,9 @@
         <module>04-spring-boot-junit</module>
         <module>05-spring-boot-devtools</module>
         <module>06-spring-boot-hibernate-validator</module>
+        <module>07-spring-boot-embedded-hikariCP</module>
+        <module>08-spring-boot-embedded-h2</module>
+        <module>09-spring-boot-jdbc</module>
     </modules>
 
     <properties>
@@ -42,7 +45,7 @@
         <spring-boot.version>2.5.8</spring-boot.version>
 
         <!-- mysql数据库驱动版本 -->
-        <mysql-connector-java.version>5.1.48</mysql-connector-java.version>
+        <mysql-connector-java.version>8.0.26</mysql-connector-java.version>
     </properties>
 
     <!-- 锁定依赖版本 -->

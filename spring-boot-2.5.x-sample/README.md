@@ -39,7 +39,9 @@
 |   √    | 04-spring-boot-junit               | Spring Boot 整合 Junit                 |
 |   √    | 05-spring-boot-devtools            | Spring Boot 热部署插件                 |
 | 整理中 | 06-spring-boot-hibernate-validator | Spring Boot 整合 javax.validation 校验 |
-|        |                                    |                                        |
+|   √    | 07-spring-boot-embedded-hikariCP   | Spring Boot 使用内置数据源 HikariCP    |
+|   √    | 08-spring-boot-embedded-h2         | Spring Boot 使用内置数据库 H2          |
+|        | 09-spring-boot-jdbc                | Spring Boot 整合 JDBC                  |
 |        |                                    |                                        |
 
 ### 计划实现
