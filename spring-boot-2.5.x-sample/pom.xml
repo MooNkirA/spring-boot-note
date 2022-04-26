@@ -31,6 +31,7 @@
         <module>07-spring-boot-embedded-hikariCP</module>
         <module>08-spring-boot-embedded-h2</module>
         <module>09-spring-boot-jdbc</module>
+        <module>11-spring-boot-redis</module>
     </modules>
 
     <properties>

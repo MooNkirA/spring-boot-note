@@ -30,18 +30,22 @@
 
 ### 已实现
 
-| 完成度 | Module 名称                        | Module 介绍                            |
-| :----: | ---------------------------------- | -------------------------------------- |
-|   √    | 00-spring-boot-quickstart          | Spring Boot 基础快速开始示例           |
-|   √    | 01-spring-boot-config              | Spring Boot 项目配置示例               |
-|   √    | 02-spring-boot-multi-config        | Spring Boot 项目多配置示例             |
-|   √    | 03-spring-boot-war                 | Spring Boot 项目打成 war 包示例        |
-|   √    | 04-spring-boot-junit               | Spring Boot 整合 Junit                 |
-|   √    | 05-spring-boot-devtools            | Spring Boot 热部署插件                 |
-| 整理中 | 06-spring-boot-hibernate-validator | Spring Boot 整合 javax.validation 校验 |
-|   √    | 07-spring-boot-embedded-hikariCP   | Spring Boot 使用内置数据源 HikariCP    |
-|   √    | 08-spring-boot-embedded-h2         | Spring Boot 使用内置数据库 H2          |
-|        | 09-spring-boot-jdbc                | Spring Boot 整合 JDBC                  |
-|        |                                    |                                        |
+|   完成度   | Module 名称                        | Module 介绍                            |
+| :--------: | ---------------------------------- | -------------------------------------- |
+|     √      | 00-spring-boot-quickstart          | Spring Boot 基础快速开始示例           |
+|     √      | 01-spring-boot-config              | Spring Boot 项目配置示例               |
+|     √      | 02-spring-boot-multi-config        | Spring Boot 项目多配置示例             |
+|     √      | 03-spring-boot-war                 | Spring Boot 项目打成 war 包示例        |
+|     √      | 04-spring-boot-junit               | Spring Boot 整合 Junit                 |
+|     √      | 05-spring-boot-devtools            | Spring Boot 热部署插件                 |
+|   整理中   | 06-spring-boot-hibernate-validator | Spring Boot 整合 javax.validation 校验 |
+|     √      | 07-spring-boot-embedded-hikariCP   | Spring Boot 使用内置数据源 HikariCP    |
+|     √      | 08-spring-boot-embedded-h2         | Spring Boot 使用内置数据库 H2          |
+|     √      | 09-spring-boot-jdbc                | Spring Boot 整合 JDBC                  |
+| 未创建工程 | 10-spring-boot-mybatis             | Spring Boot 整合 MyBatis               |
+|            | 11-spring-boot-redis               | Spring Boot 整合 Redis                 |
+|            |                                    |                                        |
+|            |                                    |                                        |
+|            |                                    |                                        |
 
 ### 计划实现

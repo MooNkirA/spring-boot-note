@@ -9,6 +9,7 @@ import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Types;
 import java.util.List;
 
 /**
@@ -32,10 +33,27 @@ public class JdbcTemplateTest {
         jdbcTemplate.update(sql);
     }
 
+    // 测试更新数据
+    @Test
+    public void testJdbcTemplateUpdate() {
+        String sql = "update tb_book set name = ? where id = ?";
+        Object[] args = {"修改后的书名", 2};
+        int[] argTypes = {Types.VARCHAR, Types.INTEGER};
+        jdbcTemplate.update(sql, args, argTypes);
+    }
+
+    // 测试删除数据
+    @Test
+    public void testJdbcTemplateDelete() {
+        String sql = "delete from tb_book where id = ?";
+        Object[] args = {3};
+        int[] argTypes = {Types.INTEGER};
+        jdbcTemplate.update(sql, args, argTypes);
+    }
+
     // 测试查询数据
     @Test
-    void testJdbcTemplateQuery(@Autowired JdbcTemplate jdbcTemplate) {
-
+    void testJdbcTemplateQuery() {
         String sql = "select * from tb_book";
         RowMapper<Book> rm = new RowMapper<Book>() {
             @Override
