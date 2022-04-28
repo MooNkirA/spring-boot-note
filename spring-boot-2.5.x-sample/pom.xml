@@ -32,6 +32,8 @@
         <module>08-spring-boot-embedded-h2</module>
         <module>09-spring-boot-jdbc</module>
         <module>11-spring-boot-redis</module>
+        <module>12-spring-boot-mongodb</module>
+        <module>13-spring-boot-elasticsearch</module>
     </modules>
 
     <properties>

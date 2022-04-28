@@ -43,8 +43,9 @@
 |     √      | 08-spring-boot-embedded-h2         | Spring Boot 使用内置数据库 H2          |
 |     √      | 09-spring-boot-jdbc                | Spring Boot 整合 JDBC                  |
 | 未创建工程 | 10-spring-boot-mybatis             | Spring Boot 整合 MyBatis               |
-|            | 11-spring-boot-redis               | Spring Boot 整合 Redis                 |
-|            |                                    |                                        |
+|     √      | 11-spring-boot-redis               | Spring Boot 整合 Redis                 |
+|   未测试   | 12-spring-boot-mongodb             | Spring Boot 整合 MongoDB               |
+|            | 13-spring-boot-elasticsearch       | Spring Boot 整合 Elasticsearch         |
 |            |                                    |                                        |
 |            |                                    |                                        |
 
