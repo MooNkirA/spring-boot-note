@@ -35,6 +35,9 @@
         <module>12-spring-boot-mongodb</module>
         <module>13-spring-boot-elasticsearch</module>
         <module>14-spring-boot-caching-embedded</module>
+        <module>15-spring-boot-caching-ehcache</module>
+        <module>16-spring-boot-caching-redis</module>
+        <module>17-spring-boot-caching-memcached</module>
     </modules>
 
     <properties>
