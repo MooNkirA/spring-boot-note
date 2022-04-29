@@ -34,6 +34,7 @@
         <module>11-spring-boot-redis</module>
         <module>12-spring-boot-mongodb</module>
         <module>13-spring-boot-elasticsearch</module>
+        <module>14-spring-boot-caching-embedded</module>
     </modules>
 
     <properties>

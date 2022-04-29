@@ -45,8 +45,8 @@
 | 未创建工程 | 10-spring-boot-mybatis             | Spring Boot 整合 MyBatis               |
 |     √      | 11-spring-boot-redis               | Spring Boot 整合 Redis                 |
 |   未测试   | 12-spring-boot-mongodb             | Spring Boot 整合 MongoDB               |
-|            | 13-spring-boot-elasticsearch       | Spring Boot 整合 Elasticsearch         |
-|            |                                    |                                        |
+|     √      | 13-spring-boot-elasticsearch       | Spring Boot 整合 Elasticsearch         |
+|            | 14-spring-boot-caching-embedded    | Spring Boot 内置缓存                   |
 |            |                                    |                                        |
 
 ### 计划实现
