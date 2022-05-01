@@ -40,6 +40,8 @@
         <module>17-spring-boot-caching-memcached</module>
         <module>18-spring-boot-caching-jetcache</module>
         <module>19-spring-boot-caching-j2cache</module>
+        <module>20-spring-boot-task-scheduling</module>
+        <module>21-spring-boot-email</module>
     </modules>
 
     <properties>

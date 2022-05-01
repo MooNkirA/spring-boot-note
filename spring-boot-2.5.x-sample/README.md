@@ -52,6 +52,8 @@
 |      √       | 17-spring-boot-caching-memcached   | Spring Boot 整合 Memcached 缓存技术    |
 |      √       | 18-spring-boot-caching-jetcache    | Spring Boot 整合 Jetcache 缓存技术     |
 |      √       | 19-spring-boot-caching-j2cache     | Spring Boot 整合 J2cache 缓存技术      |
+|      √       | 20-spring-boot-task-scheduling     | Spring Boot 整合定时任务调度框架技术   |
+|      √       | 21-spring-boot-email               | Spring Boot 整合 JavaMail              |
 |              |                                    |                                        |
 
 ### 计划实现
