@@ -39,6 +39,7 @@
         <module>16-spring-boot-caching-redis</module>
         <module>17-spring-boot-caching-memcached</module>
         <module>18-spring-boot-caching-jetcache</module>
+        <module>19-spring-boot-caching-j2cache</module>
     </modules>
 
     <properties>

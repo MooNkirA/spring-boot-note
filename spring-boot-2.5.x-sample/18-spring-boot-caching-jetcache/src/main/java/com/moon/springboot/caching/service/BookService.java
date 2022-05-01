@@ -14,4 +14,8 @@ public interface BookService {
 
     Book getById(Integer id);
 
+    boolean update(Book book);
+
+    boolean delete(Integer id);
+
 }

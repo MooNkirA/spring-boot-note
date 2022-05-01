@@ -20,7 +20,7 @@ mybatis-plus: # mybatis-plus 配置
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 # jetcache 配置
 jetcache:
-#  statIntervalMinutes: 1 # 统计间隔，0 表示不统计
+  statIntervalMinutes: 1 # 统计间隔，0 表示不统计
   local: # 设置本地缓存方案
     default: # 方案名称为 default，默认的
       type: linkedhashmap # 配置本地缓存的类型是 linkedhashmap

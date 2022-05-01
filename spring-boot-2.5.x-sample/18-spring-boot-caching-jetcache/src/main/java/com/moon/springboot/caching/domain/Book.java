@@ -2,6 +2,8 @@ package com.moon.springboot.caching.domain;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * 表实体类
  *
@@ -11,7 +13,8 @@ import lombok.Data;
  * @description
  */
 @Data
-public class Book {
+public class Book implements Serializable {
+    private static final long serialVersionUID = -4164642965841619064L;
 
     private Integer id;
     private String type;
