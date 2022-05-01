@@ -9,16 +9,16 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>17-spring-boot-caching-memcached</artifactId>
+    <artifactId>18-spring-boot-caching-jetcache</artifactId>
     <name>${project.artifactId}</name>
-    <description>Spring Boot 整合 Memcached 缓存技术示例</description>
+    <description>Spring Boot 整合 Jetcache 缓存框架示例</description>
 
     <dependencies>
-        <!-- Memcached 的客户端 Xmemcached 依赖 -->
+        <!-- jetcache 依赖 -->
         <dependency>
-            <groupId>com.googlecode.xmemcached</groupId>
-            <artifactId>xmemcached</artifactId>
-            <version>2.4.7</version>
+            <groupId>com.alicp.jetcache</groupId>
+            <artifactId>jetcache-starter-redis</artifactId>
+            <version>2.6.2</version>
         </dependency>
 
         <dependency>
@@ -30,6 +30,17 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.4.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
         </dependency>
 
         <dependency>

@@ -49,7 +49,8 @@
 |      √       | 14-spring-boot-caching-embedded    | Spring Boot 内置缓存                   |
 | 暂未测试通过 | 15-spring-boot-caching-ehcache     | Spring Boot 整合 Ehcache 缓存技术      |
 |      √       | 16-spring-boot-caching-redis       | Spring Boot 整合 Redis 缓存技术        |
-|              | 17-spring-boot-caching-memcached   | Spring Boot 整合 Memcached 缓存技术    |
+|      √       | 17-spring-boot-caching-memcached   | Spring Boot 整合 Memcached 缓存技术    |
+|              | 18-spring-boot-caching-jetcache    | Spring Boot 整合 Jetcache 缓存技术     |
 |              |                                    |                                        |
 
 ### 计划实现

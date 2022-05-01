@@ -1,0 +1,43 @@
+server:
+  port: 80
+spring:
+  h2:
+    console:
+      enabled: true # 开启 H2 数据库控制台访问程序
+      path: /h2
+  datasource:
+    url: jdbc:h2:mem:h2_test;MODE=MySQL;DATABASE_TO_LOWER=TRUE
+    driver-class-name: org.h2.Driver
+    username: root
+    password: 123456
+    schema: classpath:db/schema-h2.sql # H2 初始化表结构
+    data: classpath:db/data-h2.sql # H2 初始化数据
+mybatis-plus: # mybatis-plus 配置
+  global-config:
+    db-config:
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+# jetcache 配置
+jetcache:
+#  statIntervalMinutes: 1 # 统计间隔，0 表示不统计
+  local: # 设置本地缓存方案
+    default: # 方案名称为 default，默认的
+      type: linkedhashmap # 配置本地缓存的类型是 linkedhashmap
+      keyConvertor: fastjson # 配置键类型转换器，当前仅支持 fastjson
+  remote: # 设置远程缓存方案
+    default: # 方案名称为 default，默认的
+      type: redis # 缓存实现类型
+      host: localhost
+      port: 6379
+      keyConvertor: fastjson # 配置键类型转换器，当前仅支持 fastjson
+      valueEncode: java # 配置值转码类型，此配置仅在 remote 类型时配置，可选 java 和 kryo
+      valueDecode: java
+      poolConfig:
+        maxTotal: 50
+    sms: # 可以设置多套缓存方案
+      type: redis
+      host: localhost
+      port: 6379
+      poolConfig:
+        maxTotal: 50
