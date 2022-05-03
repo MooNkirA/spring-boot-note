@@ -1,0 +1,6 @@
+server:
+  port: 80
+spring:
+  rabbitmq: # RabbitMQ 相关配置
+    host: 192.168.12.132
+    port: 5672

@@ -42,6 +42,8 @@
         <module>19-spring-boot-caching-j2cache</module>
         <module>20-spring-boot-task-scheduling</module>
         <module>21-spring-boot-email</module>
+        <module>22-spring-boot-activemq</module>
+        <module>23-spring-boot-rabbitmq</module>
     </modules>
 
     <properties>

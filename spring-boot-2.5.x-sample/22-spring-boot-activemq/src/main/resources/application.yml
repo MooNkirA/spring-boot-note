@@ -1,0 +1,7 @@
+server:
+  port: 80
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616 # ActiveMQ 服务地址
+  jms:
+    pub-sub-domain: true # 设置消息模型，默认值为 false，即点对点模型，修改为 true 即发布订阅模型。

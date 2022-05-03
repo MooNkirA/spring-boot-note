@@ -54,6 +54,10 @@
 |      √       | 19-spring-boot-caching-j2cache     | Spring Boot 整合 J2cache 缓存技术      |
 |      √       | 20-spring-boot-task-scheduling     | Spring Boot 整合定时任务调度框架技术   |
 |      √       | 21-spring-boot-email               | Spring Boot 整合 JavaMail              |
+|      √       | 22-spring-boot-activemq            | Spring Boot 整合 ActiveMQ              |
+|              | 23-spring-boot-rabbitmq            | Spring Boot 整合 RabbitMQ              |
+|              | 24-spring-boot-rocketmq            | Spring Boot 整合 RocketMQ              |
+|              | 25-spring-boot-kafka               | Spring Boot 整合 Kafka                 |
 |              |                                    |                                        |
 
 ### 计划实现
