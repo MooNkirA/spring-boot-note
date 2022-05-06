@@ -45,6 +45,8 @@
         <module>22-spring-boot-activemq</module>
         <module>23-spring-boot-rabbitmq</module>
         <module>24-spring-boot-rocketmq</module>
+        <module>25-spring-boot-kafka</module>
+        <module>26-spring-boot-admin</module>
     </modules>
 
     <properties>
