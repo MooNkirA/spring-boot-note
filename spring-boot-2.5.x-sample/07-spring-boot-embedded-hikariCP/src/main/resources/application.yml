@@ -1,0 +1,13 @@
+spring:
+  # 不引用其他第三方数据源依赖，直接配置 datasource 属性，使用默认的数据源 HikariCP
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/tempdb?useSSL=false&useUnicode=true
+    # driver-class-name: com.mysql.cj.jdbc.Driver
+    # username: root
+    # password: 123456
+    # 可以对 HikariCP 配置其独立的属性，但要注意 url 属性还是需要单独配置，否则会报错
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 123456
+      maximum-pool-size: 50

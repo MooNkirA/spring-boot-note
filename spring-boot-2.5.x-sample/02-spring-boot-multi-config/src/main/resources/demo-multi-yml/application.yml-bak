@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    # 指定当前激活的配置文件，也可指定多个其他按功能拆分的配置文件（但一般会将功能类的配置转移到 include 或者 group（2.4版本后加入的新属性）中引入。）
+    # active: dev,database,freemarker,jpa
+    active: dev
+    include: database,freemarker,jpa

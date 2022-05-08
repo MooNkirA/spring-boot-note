@@ -1,0 +1,7 @@
+server:
+  port: 80
+# 自定义的 Memcached 配置，用于配置类读取
+memcached:
+  servers: localhost:11211
+  poolSize: 10
+  opTimeout: 3000

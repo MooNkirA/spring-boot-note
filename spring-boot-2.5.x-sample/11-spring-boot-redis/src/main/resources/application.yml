@@ -1,0 +1,12 @@
+spring:
+  redis:
+    host: localhost # redis 服务地址，默认是 localhost
+    port: 6379 # redis 服务端口，默认是 6379
+    # Spring Boot 默认的客户端是 lettuce，使用 client-type 属性来指定客户端的类型
+    client-type: jedis
+#    lettuce: # 根据客户端的类型，设置对应的配置。默认是 lettuce 客户端
+#      pool:
+#        max-active: 16
+    jedis: # 根据客户端的类型，设置对应的配置。示例使用 jedis 客户端
+      pool:
+        max-active: 16

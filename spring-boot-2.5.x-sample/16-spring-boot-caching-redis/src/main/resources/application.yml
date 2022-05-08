@@ -1,0 +1,13 @@
+server:
+  port: 80
+spring:
+  cache:
+    type: redis # 指定缓存实现的类型
+    redis:
+      use-key-prefix: true # 配置是否给保存缓存的键增加前缀
+      key-prefix: sms_ # 配置键前缀
+      cache-null-values: true # 配置缓存值是否可以为 null
+      time-to-live: 300s # 缓存键过期的时间
+  redis: # redis 服务连接信息
+    host: localhost
+    port: 6379

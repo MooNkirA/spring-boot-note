@@ -1,0 +1,7 @@
+server:
+  port: 80
+spring:
+  kafka: # kafka 配置
+    bootstrap-servers: localhost:9092 # 服务地址
+    consumer:
+      group-id: order # 设置默认的生产者/消费者所属组 id

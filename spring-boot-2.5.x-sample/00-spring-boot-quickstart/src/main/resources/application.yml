@@ -1,0 +1,4 @@
+# spring boot 项目的基础配置
+spring:
+  application:
+    name: 00-spring-boot-quickstart

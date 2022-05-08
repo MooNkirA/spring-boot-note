@@ -1,0 +1,28 @@
+server:
+  port: 9100
+
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080 # 指定当前客户端将监控信息上传到哪个服务器上
+management:
+  endpoint: # 具体端点的配置
+    health:
+      show-details: always # 开放所有的健康信息明细，默认值是 never，不开放
+      enabled: true # 默认端点，不能关闭
+    info:
+      enabled: true # 是否开启 info 端点。（其他端点以同样的方式设置是否开启）
+  endpoints: # 全部端点的配置
+    web:
+      exposure:
+        # 设置通过HTTP请求可查阅的信息，默认值只有 health(健康信息)，
+        # 如果配置 "*" 则可查询全部，包含了13组信息，有性能指标监控，加载的bean列表，加载的系统属性，日志的显示控制等等
+        include: "*"
+    enabled-by-default: true # 是否开启默认开放的端点
+# 配置 info 端点信息
+info:
+  appName: @project.artifactId@
+  version: @project.version@
+  company: GK
+  author: MooNKirA

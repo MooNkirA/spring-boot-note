@@ -1,0 +1,79 @@
+# SpringBoot 工程中，3种类型的配置文件同时存在，其加载的优先级顺序是：application.properties  >  application.yml  >  application.yaml
+server:
+  port: 8082
+
+# ================= yml 语法测试 =================
+booleanType: TRUE                         # TRUE,true,True,FALSE,false，False均可
+floatType: 3.14                           # 6.8523015e+5  #支持科学计数法
+intType: 123                              # 0b1010_0111_0100_1010_1110    #支持二进制、八进制、十六进制
+nullType: ~                               # 使用~表示null
+stringType: HelloWorld                    # 字符串可以直接书写
+stringType2: "Hello World"                # 可以使用双引号包裹特殊字符
+dateType: 2018-02-17                      # 日期必须使用yyyy-MM-dd格式
+datetimeType: 2018-02-17T15:02:31+08:00   # 时间和日期之间使用T连接，最后使用+代表时区
+
+# 普通数据
+name: MooNkirA
+msg1: 'hello \n world'  # 单引号忽略转义字符
+msg2: "hello \n world"  # 双引号识别转义字符
+
+# 对象 写法1:
+person:
+  name: Alan
+  age: 18
+
+# 对象 写法2:
+person2: { name: Danny, age: 20 }
+
+# 基础类型数组写法1:
+city:
+  - beijing
+  - tianjin
+  - shanghai
+  - chongqing
+
+# 基础类型数组写法2:
+city2: [ beijing,tianjin,shanghai,chongqing ]
+
+# 对象类型数组写法1:
+student:
+  - name: Paul
+    age: 18
+    score: 100
+  - name: Kobe
+    age: 28
+    score: 88
+  - name: Glen
+    age: 38
+    score: 90
+
+# 对象类型数组写法2:
+student2: [ { name: Paul, age: 18, score: 100 }, { name: Kobe, age: 28, score: 88 }, { name: Glen, age: 28, score: 88 } ]
+
+# 复杂对象类型
+company:
+  name: ${name} # 使用 ${} 可以引用 yml 内容定义的其他参数的值
+  tel: 13800000000
+  email: moon@moon.com
+  subject:
+    - Java
+    - python
+    - Big data
+
+# ********** 测试 @ConfigurationProperties 给第三方 jar 包 druid 对象属性绑定值 **********
+dataSource:
+  driverClassName: com.mysql.jdbc.Driver123 # 故意随意写
+  password: 1234567890
+
+# ********** 测试 Spring Boot 宽松绑定规则 **********
+servers:
+  # 以下配置均可配置到实体类 ipAddress 属性
+  ip-address: 192.168.0.2       # 官方推荐配置名称使用烤肉串模式，也就是中划线模式
+  # ipAddress: 192.168.0.2      # 驼峰模式
+  # ip_address: 192.168.0.2     # 下划线模式
+  # IP_ADDRESS: 192.168.0.2     # 常量模式
+  # IPADDRESS: 192.168.0.2
+  # IP_ADD_R-E_SS: 192.168.0.2  # 任何写法（实际开发不推荐这么乱搞 ^_^）
+  serverTimeOut: 3    # 使用常用计量单位绑定
+  dataSize: 10        # 使用常用计量单位绑定
+
