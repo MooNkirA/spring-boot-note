@@ -1,0 +1,3 @@
+# SpringBoot 工程中，3种类型的配置文件同时存在，其加载的优先级顺序是：application.properties  >  application.yml  >  application.yaml
+server:
+  port: 8083

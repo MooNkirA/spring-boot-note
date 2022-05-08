@@ -1,0 +1,6 @@
+spring:
+  mail: # 配置邮件功能
+    host: smtp.126.com # 邮箱服务器地址
+    username: ${uname} # 邮箱账号
+    password: ${pwd} # 密码
+    default-encoding: UTF-8 # 默认编码，默认值是 UTF-8

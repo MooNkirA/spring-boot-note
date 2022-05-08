@@ -1,0 +1,4 @@
+person: # 测试通过 validator 检查配置绑定数据，修改以下值为不合法来测试效果
+  name: MooNkirA
+  age: 28
+  email: moon@moon.com

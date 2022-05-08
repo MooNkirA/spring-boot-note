@@ -1,0 +1,17 @@
+server:
+  port: 80
+spring:
+  h2:
+    console:
+      # 置开启 H2 数据库控制台访问程序，也可以使用其他的数据库连接软件操作
+      enabled: true
+      path: /h2
+  # H2 数据库控制台通过 web 端访问路径 /h2，访问密码 123456，如果访问失败，先配置下列数据源，启动程序运行后再次访问/h2路径就可以正常访问了
+  datasource:
+    url: jdbc:h2:mem:h2_test;MODE=MySQL;DATABASE_TO_LOWER=TRUE
+    # driver-class-name: org.h2.Driver # 可省略，Spring boot 会根据数据库的类型去选择相应的数据库连接驱动
+    username: root
+    password: 123456
+    # 可以为 H2 配置两个sql文件用于程序启动时的数据表的创建与初始化；
+    schema: classpath:db/schema-h2.sql # 创建表结构
+    data: classpath:db/data-h2.sql # 初始化数据

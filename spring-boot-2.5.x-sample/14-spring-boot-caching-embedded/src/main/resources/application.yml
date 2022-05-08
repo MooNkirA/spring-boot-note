@@ -1,0 +1,20 @@
+server:
+  port: 80
+spring:
+  h2:
+    console:
+      enabled: true # 开启 H2 数据库控制台访问程序
+      path: /h2
+  datasource:
+    url: jdbc:h2:mem:h2_test;MODE=MySQL;DATABASE_TO_LOWER=TRUE
+    driver-class-name: org.h2.Driver
+    username: root
+    password: 123456
+    schema: classpath:db/schema-h2.sql # H2 初始化表结构
+    data: classpath:db/data-h2.sql # H2 初始化数据
+mybatis-plus: # mybatis-plus 配置
+  global-config:
+    db-config:
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

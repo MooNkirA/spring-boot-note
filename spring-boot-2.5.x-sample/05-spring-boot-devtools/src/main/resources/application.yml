@@ -1,0 +1,7 @@
+spring:
+  devtools:
+    restart:
+      # 配置排除触发热部署的资源（文件或者文件夹）
+      exclude: static/**,public/**
+      # 配置更改指定文件时才触发自动重启
+      trigger-file: .trigger  # 文件所在路径是 /resources/META-INF/.trigger
