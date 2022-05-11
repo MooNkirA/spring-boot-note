@@ -46,6 +46,13 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+
+        <!-- 导入自定义 starters -->
+        <dependency>
+            <groupId>com.tools</groupId>
+            <artifactId>counter-spring-boot-starter</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 </project>
