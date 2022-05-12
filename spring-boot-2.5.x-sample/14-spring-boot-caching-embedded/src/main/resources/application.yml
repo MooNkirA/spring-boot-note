@@ -18,10 +18,3 @@ mybatis-plus: # mybatis-plus 配置
       id-type: auto
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-
-# 自定义 starter 配置
-tools:
-  ip:
-    cycle: 5
-    cycle-reset: false
-    model: "detail"

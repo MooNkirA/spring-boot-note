@@ -58,7 +58,8 @@
 |      √       | 23-spring-boot-rabbitmq            | Spring Boot 整合 RabbitMQ              |
 |      √       | 24-spring-boot-rocketmq            | Spring Boot 整合 RocketMQ              |
 |      √       | 25-spring-boot-kafka               | Spring Boot 整合 Kafka                 |
-|              | 26-spring-boot-admin               | Spring Boot Admin 实现监控功能         |
+|      √       | 26-spring-boot-admin               | Spring Boot Admin 实现监控功能         |
 |              |                                    |                                        |
+|      √       | counter-spring-boot-starter        | 自定义 Spring Boot Starter             |
 
 ### 计划实现

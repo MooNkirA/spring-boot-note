@@ -3,6 +3,7 @@ package com.tool.autoconfigure;
 import com.tool.service.IpCountService;
 import com.tool.service.IpCountServiceImpl;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
@@ -17,6 +18,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling // 开启 Spring Task 定时任务
 // @EnableConfigurationProperties(IpCountProperties.class)
 @Import({IpCountProperties.class})
+@ComponentScan("com.tool")
 public class IpCountAutoConfiguration {
 
     @Bean
