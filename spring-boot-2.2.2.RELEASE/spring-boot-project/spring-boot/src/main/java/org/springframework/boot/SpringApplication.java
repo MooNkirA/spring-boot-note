@@ -264,13 +264,22 @@ public class SpringApplication {
 	 * @see #setSources(Set)
 	 */
 	@SuppressWarnings({ "unchecked", "rawtypes" })
+	// 创建 SpringApplication 实例，并加载各种配置信息，初始化各种配置对象
 	public SpringApplication(ResourceLoader resourceLoader, Class<?>... primarySources) {
+		// 初始化资源加载器
 		this.resourceLoader = resourceLoader;
+		// 断言主类不为空
 		Assert.notNull(primarySources, "PrimarySources must not be null");
+		// 初始化配置类的类名信息（由原来数组转换成 Set 集合）
 		this.primarySources = new LinkedHashSet<>(Arrays.asList(primarySources));
+		// 确认当前容器加载的类型
 		this.webApplicationType = WebApplicationType.deduceFromClasspath();
+		// getSpringFactoriesInstances 方法，用于读取资源目录 META-INF/spring.factories 文件
+		// 获取 ApplicationContextInitializer 类型的实例
 		setInitializers((Collection) getSpringFactoriesInstances(ApplicationContextInitializer.class));
+		// 初始化监听器，对初始化过程及运行过程进行干预
 		setListeners((Collection) getSpringFactoriesInstances(ApplicationListener.class));
+		// 初始化了引导类类名信息，备用
 		this.mainApplicationClass = deduceMainApplicationClass();
 	}
 
@@ -291,34 +300,55 @@ public class SpringApplication {
 
 	/**
 	 * Run the Spring application, creating and refreshing a new
+	 * 初始化容器的核心方法
 	 * {@link ApplicationContext}.
 	 * @param args the application arguments (usually passed from a Java main method)
 	 * @return a running {@link ApplicationContext}
 	 */
 	public ConfigurableApplicationContext run(String... args) {
+		// 设置计时器
 		StopWatch stopWatch = new StopWatch();
+		// 开始计时
 		stopWatch.start();
 		ConfigurableApplicationContext context = null;
 		Collection<SpringBootExceptionReporter> exceptionReporters = new ArrayList<>();
+		// 模拟输入输出信号，避免出现因缺少外设导致的信号传输失败，进而引发错误（模拟显示器，键盘，鼠标...）
+		// 设置 java.awt.headless=true
 		configureHeadlessProperty();
+		// 获取当前注册的所有监听器
 		SpringApplicationRunListeners listeners = getRunListeners(args);
+		// 执行容器启动中事件的监听器，即调用 ApplicationListener 接口的 onApplicationEvent 方法
 		listeners.starting();
 		try {
+			// 获取启动应用的参数
 			ApplicationArguments applicationArguments = new DefaultApplicationArguments(args);
+			// 将前期读取的数据加载成了一个环境对象 ConfigurableEnvironment，用来描述信息
 			ConfigurableEnvironment environment = prepareEnvironment(listeners, applicationArguments);
+			// 配置忽略的信息，暂不知道什么作用
 			configureIgnoreBeanInfo(environment);
+			// 初始化项目启动时的 logo
 			Banner printedBanner = printBanner(environment);
+			// 创建容器对象，根据前期配置的容器类型进行判定并创建
 			context = createApplicationContext();
+			// 读取 spring.factories 文件，获取 SpringBootExceptionReporter 类型的实例
 			exceptionReporters = getSpringFactoriesInstances(SpringBootExceptionReporter.class,
 					new Class[] { ConfigurableApplicationContext.class }, context);
+			// 对容器进行设置，参数来源于前期的设定
 			prepareContext(context, environment, listeners, applicationArguments, printedBanner);
+			// 刷新容器环境
 			refreshContext(context);
+			// 刷新完毕后做后置处理
 			afterRefresh(context, applicationArguments);
+			// 计时结束
 			stopWatch.stop();
+			// 判定是否记录启动时间的日志
 			if (this.logStartupInfo) {
+				// 创建日志对应的对象，输出日志信息，包含启动时间
 				new StartupInfoLogger(this.mainApplicationClass).logStarted(getApplicationLog(), stopWatch);
 			}
+			// 监听器执行了对应的操作步骤
 			listeners.started(context);
+			// 调用运行器
 			callRunners(context, applicationArguments);
 		}
 		catch (Throwable ex) {
@@ -327,6 +357,7 @@ public class SpringApplication {
 		}
 
 		try {
+			// 执行容器运行中事件的监听器
 			listeners.running(context);
 		}
 		catch (Throwable ex) {
@@ -421,10 +452,14 @@ public class SpringApplication {
 	}
 
 	private <T> Collection<T> getSpringFactoriesInstances(Class<T> type, Class<?>[] parameterTypes, Object... args) {
+		// 获取类加载器
 		ClassLoader classLoader = getClassLoader();
 		// Use names and ensure unique to protect against duplicates
+		// 根据类型，获取 spring.factories 文件中配置的相关实现类全限定名称集合
 		Set<String> names = new LinkedHashSet<>(SpringFactoriesLoader.loadFactoryNames(type, classLoader));
+		// 根据全限定名，实例化
 		List<T> instances = createSpringFactoriesInstances(type, parameterTypes, classLoader, args, names);
+		// 将实例化的对象排序
 		AnnotationAwareOrderComparator.sort(instances);
 		return instances;
 	}
