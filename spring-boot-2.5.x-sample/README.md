@@ -33,6 +33,7 @@
 |    完成度    | Module 名称                        | Module 介绍                            |
 | :----------: | ---------------------------------- | -------------------------------------- |
 |      √       | 00-spring-boot-quickstart          | Spring Boot 基础快速开始示例           |
+|              | 00-spring-boot-embedded-tomcat     | Spring Boot 内嵌 Tomcat 容器模拟实现   |
 |      √       | 01-spring-boot-config              | Spring Boot 项目配置示例               |
 |      √       | 02-spring-boot-multi-config        | Spring Boot 项目多配置示例             |
 |      √       | 03-spring-boot-war                 | Spring Boot 项目打成 war 包示例        |
