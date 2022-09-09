@@ -33,6 +33,7 @@
 |    完成度    | Module 名称                        | Module 介绍                            |
 | :----------: | ---------------------------------- | -------------------------------------- |
 |      √       | 00-spring-boot-quickstart          | Spring Boot 基础快速开始示例           |
+|              | 00-spring-boot-embedded-tomcat     | Spring Boot 内嵌 Tomcat 容器模拟实现   |
 |      √       | 01-spring-boot-config              | Spring Boot 项目配置示例               |
 |      √       | 02-spring-boot-multi-config        | Spring Boot 项目多配置示例             |
 |      √       | 03-spring-boot-war                 | Spring Boot 项目打成 war 包示例        |
@@ -58,7 +59,8 @@
 |      √       | 23-spring-boot-rabbitmq            | Spring Boot 整合 RabbitMQ              |
 |      √       | 24-spring-boot-rocketmq            | Spring Boot 整合 RocketMQ              |
 |      √       | 25-spring-boot-kafka               | Spring Boot 整合 Kafka                 |
-|              | 26-spring-boot-admin               | Spring Boot Admin 实现监控功能         |
+|      √       | 26-spring-boot-admin               | Spring Boot Admin 实现监控功能         |
 |              |                                    |                                        |
+|      √       | counter-spring-boot-starter        | 自定义 Spring Boot Starter             |
 
 ### 计划实现

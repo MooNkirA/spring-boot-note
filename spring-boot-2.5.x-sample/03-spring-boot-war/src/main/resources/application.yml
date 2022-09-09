@@ -1,0 +1,5 @@
+spring:
+  mvc:
+    view: # 配置视图的前后缀，访问时，“prefix + 控制器方法返回值 + suffix” 即为视图完整路径
+      prefix: /
+      suffix: .jsp
