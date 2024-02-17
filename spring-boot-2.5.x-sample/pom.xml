@@ -48,6 +48,7 @@
         <module>24-spring-boot-rocketmq</module>
         <module>25-spring-boot-kafka</module>
         <module>26-spring-boot-admin</module>
+        <module>spring-boot-multi-datasource</module>
     </modules>
 
     <properties>
