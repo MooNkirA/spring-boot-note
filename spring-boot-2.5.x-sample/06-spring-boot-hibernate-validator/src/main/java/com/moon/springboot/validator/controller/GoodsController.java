@@ -3,6 +3,7 @@ package com.moon.springboot.validator.controller;
 import com.moon.springboot.validator.bean.GoodsDTO;
 import com.moon.springboot.validator.groups.Create;
 import com.moon.springboot.validator.groups.Update;
+import com.moon.springboot.validator.utils.ValidatorUtils;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -37,6 +38,15 @@ public class GoodsController {
     public String update(@RequestBody @Validated(Update.class) GoodsDTO goodsDTO) {
         System.out.println("更新分组校验...");
         return "更新分组校验 success";
+    }
+
+    /**
+     * 新增。通过通用校验工具类进行校验
+     */
+    @PostMapping("/save")
+    public String save(@RequestBody GoodsDTO goodsDTO) throws Exception {
+        ValidatorUtils.validateEntity(goodsDTO, Create.class);
+        return "新增 success";
     }
 
 }
